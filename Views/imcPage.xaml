@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:IMCMVVM_JARV.ViewModels"
+             x:Class="IMCMVVM_JARV.Views.imcPage"
+             Title="Calculadora IMC">
+
+    <ContentPage.BindingContext>
+        <viewmodels:IMCViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="24" Spacing="16">
+
+        <Label Text="Calculadora IMC"
+               FontSize="26"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+        <Label Text="Peso en kilogramos (kg):" />
+        <Entry Placeholder="Ejemplo: 70"
+               Keyboard="Numeric"
+               Text="{Binding PesoT, Mode=TwoWay}" />
+
+        <Label Text="Ingrese su estatura en metros (m):" />
+        <Entry x:Name="EstaturaEntry"
+               Placeholder="Ejemplo: 1.75"
+               Keyboard="Numeric"
+               Text="{Binding EstaturaT, Mode=TwoWay}" />
+
+        <Button Text="Calcular IMC"
+                Command="{Binding CalcularCommand}"
+                Margin="0,10,0,0" />
+
+        <Label Text="{Binding Resultado}"
+               FontSize="22"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,15,0,0" />
+
+    </VerticalStackLayout>
+</ContentPage>

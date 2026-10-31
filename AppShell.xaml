@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="IMCMVVM_JARV.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:IMCMVVM_JARV"
+    xmlns:views="clr-namespace:IMCMVVM_JARV.Views"
+    Title="IMCMVVM_JARV">
+
+    <ShellContent
+        Title="Calculadora IMC"
+        ContentTemplate="{DataTemplate views:imcPage}"
+        Route="imcPage" />
+
+</Shell>
